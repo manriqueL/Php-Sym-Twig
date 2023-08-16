@@ -1,0 +1,3 @@
+index: 
+    path: /Inicio
+    controller: App\Controller\GuxController::index

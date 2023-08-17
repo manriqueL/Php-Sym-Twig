@@ -11,7 +11,13 @@ class GuxController extends AbstractController
     public function index(): Response
     {
         return $this->render('gux/index.html.twig', [
-            'controller_name' => 'GuxController',
+            'titulo' => 'Lucas Manrique',
+        ]);
+    }
+    public function team(): Response
+    {
+        return $this->render('gux/team.html.twig', [
+            'titulo' => '123123123',
         ]);
     }
 }

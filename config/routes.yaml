@@ -1,3 +1,7 @@
 index: 
-    path: /Inicio
+    path: /inicio
     controller: App\Controller\GuxController::index
+
+team: 
+    path: /team
+    controller: App\Controller\GuxController::team

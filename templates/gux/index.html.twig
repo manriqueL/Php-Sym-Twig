@@ -1,7 +1,43 @@
-{% extends 'base.html.twig' %}
+{% extends 'layouts/layouts.html.twig' %}
 
-{% block title %}Hello GuxController!{% endblock %}
+{% block title %} Inicio {% endblock %}
 
-{% block body %}
-    <h1>Lucas</h1>
+{% block header %}
+    <h2>HEADER de Pagina de Inicio</h2>
+    <hr>
+{% endblock %}
+{% set nombre = 'cluadio' %}
+
+{% block content %}
+    <h2>Contenido de Pagina de Inicio</h2>
+        <h1>su nombre es: {{ nombres[1] }}</h1>
+        <h1>su apellidos son: {{ apellidos[0] ~', '~apellidos[1] }}</h1>
+        {{ dump(nombres)}}
+
+    <h2>Apellidos</h2>
+    {% if apellidos|length != 0 %}
+        {% for i in apellidos %}
+                <ul>
+                    <li>{{i}}</li>
+                </ul>
+                <hr>
+        {% endfor %}
+    {% endif %}
+
+    <h2>Nombres</h2>
+    {% for i in nombres %}
+        {% if i == 'yesica' %}
+            <ul>
+                <li>{{i}}</li>
+            </ul>
+        {% endif %}
+    {% endfor %}
+    <hr>
+
+<hr>
+{% endblock %}
+
+{% block footer %}
+
+   INICIO
 {% endblock %}

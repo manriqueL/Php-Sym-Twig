@@ -1,7 +1,26 @@
-index: 
-    path: /inicio
+inicio: 
+    path: /inicio/{nombre?}
     controller: App\Controller\GuxController::index
-
+    defaults: {nombre: 'Lucas', apellido: 'Manrique'}
+    methods: [GET]
+    requirements:
+        nombre: '[a-zA-Z ]+'
+        apellido: '[a-zA-Z ]+'
 team: 
-    path: /team
+    path: /team/{nombre?}/{apellido?}
     controller: App\Controller\GuxController::team
+    defaults: {nombre: 'Lucas', apellido: 'Manrique'}
+    methods: [POST, GET]
+    requirements:
+        nombre: '[a-zA-Z ]+'
+        apellido: '[a-zA-Z ]+'
+table: 
+    path: /table/{numero}
+    controller: App\Controller\GuxController::table
+    methods: [POST, GET]
+    requirements:
+        numero: '[0-9]'
+
+redirigir: 
+    path: /redirigir
+    controller: App\Controller\GuxController::redirigir

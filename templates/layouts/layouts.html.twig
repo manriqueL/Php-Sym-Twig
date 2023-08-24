@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Base {% endblock %}  - GUX </title> 
+</head>
+<body>
+    <header id="header">
+        <!-- Encabezado común aquí -->
+        {% block header %} 
+            <h1>{{titulo}}</h1>
+            <h2> Su nombre es: {{ nombre }}</h2>
+            <h2> Su apellido es: {{ apellido }}</h2>
+            <hr/>
+        {% endblock %}
+    </header>
+
+    <nav>
+        <!-- Navegación común aquí -->
+    </nav>
+
+    <main id="content">
+
+        {% block content %} <h2>CONTENT LAYOUT</h2> 
+            <ul>
+                <li>111111</li>
+                <li>222222</li>
+                <li>333333</li>
+            </ul>
+            <hr/>
+        {% endblock %}
+
+    </main>
+
+    <footer id='footer'>
+        <!-- Pie de página común aquí -->
+       <h4>  PIE DE PAGINA DE {% block footer %} BASE  {% endblock %} </h4>   
+      
+
+        
+    </footer>
+</body>
+</html>

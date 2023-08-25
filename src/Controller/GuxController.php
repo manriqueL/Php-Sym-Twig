@@ -10,8 +10,8 @@ class GuxController extends AbstractController
 {
     public function index($nombre, $numero): Response
     {
-        $nombres = array('lucas', 'yesica', 'santiago', 'exequiel', 'carlinho');
-        $apellidos = array( 'manrique', 'acuña', 'fernandez', 'velazques');
+        $nombres = array('lucas', 'exequiel', 'santiago', 'yesica', 'carlinho');
+        $apellidos = array( 'manrique', 'velazques', 'fernandez', 'acuña');
         $titulo = 'TITULO DE INICIO';
         return $this->render('gux/index.html.twig', [
             'titulo' => $titulo,

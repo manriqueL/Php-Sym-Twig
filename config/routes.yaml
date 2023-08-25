@@ -19,7 +19,7 @@ table:
     controller: App\Controller\GuxController::table
     methods: [POST, GET]
     requirements:
-        numero: '[0-9]'
+        numero: '[0-9 ]+'
 
 redirigir: 
     path: /redirigir
